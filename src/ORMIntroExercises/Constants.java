@@ -1,6 +1,8 @@
 package ORMIntroExercises;
 
 public enum Constants {
+
+// Info for connection to DB
     ;
     static final String USER_KEY = "user";
     static final String USER_VALUE = "root";

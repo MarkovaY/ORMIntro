@@ -12,6 +12,9 @@ public class GetVillainsNames {
 
     public static void main(String[] args) throws SQLException {
 
+//        Write a program that prints on the console all villains’ names and their number of minions.
+//        Get only the villains who have more than 15 minions. Order them by a number of minions in descending order.
+
         final Connection connection = Utils.getSQLConnection();
 
         final PreparedStatement statement = connection.prepareStatement(GET_VILLAINS_NAMES);

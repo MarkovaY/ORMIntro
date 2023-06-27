@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public enum Utils {
+
+//    Info for the properties
     ;
     static Connection getSQLConnection() throws SQLException {
         final Properties properties = new Properties();
