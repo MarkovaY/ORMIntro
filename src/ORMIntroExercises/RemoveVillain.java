@@ -54,9 +54,12 @@ public class RemoveVillain {
     }
 
     private static void deleteVillainReleaseMinions(Connection connection, int villainId) throws SQLException {
+//        I first release the minions by deleting the connection between the villain and the minions in their common table.
+
         final PreparedStatement releaseMinionsFromVillain = connection.prepareStatement(DELETE_MINIONS_AND_VILLAIN_FROM_COMMON_TABLE);
         releaseMinionsFromVillain.setInt(1, villainId);
         releaseMinionsFromVillain.executeUpdate();
+//         Then delete the villain from the villain table.
 
         final PreparedStatement deleteVillain = connection.prepareStatement(DELETE_VILLAIN);
         deleteVillain.setInt(1, villainId);
